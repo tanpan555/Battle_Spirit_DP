@@ -1,0 +1,171 @@
+[zone="LIFE"] .Blue_core{
+    width: 50px;
+}
+
+[zone="RESERVE"] .Blue_core{
+    width: 20px;
+}
+
+.CARD_CSS{
+    width: 80px;
+}
+
+#HAND{
+    display: flex;
+    flex-flow: wrap;
+    gap: 8px;
+}
+
+.COUNTER_NUMBER {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+/*---------------------------------------- Playmat ----------------------------------------*/
+#playmat {
+  --mat-bg: #0b0f1a;
+  --mat-accent: #3a7bd5;
+  --zone-bg: rgba(255,255,255,0.06);
+  --zone-border: rgba(255,255,255,0.35);
+  --slot-border: rgba(255,255,255,0.35);
+  --text: #eef2ff;
+  --subtext: #c7d2fe;
+  --bleed: 16px;
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans, "Liberation Sans", sans-serif;
+}
+
+/* region container often adds padding; keep full width feel */
+#playmat .wrapper { max-width: 1400px; margin: 12px auto; padding: 0 8px; }
+#playmat .title { display:flex; align-items:center; gap:12px; margin: 4px 0 10px; }
+#playmat .title h1 { font-size: clamp(18px, 2.2vw, 26px); margin:0; font-weight:700; letter-spacing:.3px; }
+#playmat .title small { color: var(--subtext); }
+
+#playmat .controls { display:flex; gap:12px; align-items:center; margin-bottom: 10px; }
+#playmat .toggle {
+  padding: 6px 10px; border: 1px solid var(--zone-border); border-radius: 10px;
+  background: #111827; color: var(--text); cursor: pointer;
+}
+
+/* Mat base: 24:14 ratio */
+#playmat .mat {
+  position: relative;
+  aspect-ratio: 24 / 14;
+  width: 100%;
+  background: radial-gradient(120% 120% at 100% 0%, #0e1629 0%, #0b0f1a 50%, #0b0f1a 100%);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.08);
+}
+
+/* Decorative micro grid */
+#playmat .mat::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: .12; pointer-events: none;
+}
+
+/* Safe-area / bleed */
+#playmat .safe {
+  position: absolute; inset: var(--bleed);
+  border: 1px dashed rgba(255,255,255,0.15);
+  border-radius: 12px; pointer-events: none;
+}
+
+/* Layout grid */
+#playmat .grid {
+  position: absolute; inset: calc(var(--bleed) + 6px);
+  display: grid;
+  grid-template-columns: 1.2fr 2.2fr 2.2fr 1.6fr;
+  grid-template-rows: 1fr 1fr 2.2fr 1.2fr;
+  gap: 10px;
+}
+
+#playmat .zone {
+  background: var(--zone-bg);
+  border: 2px solid var(--zone-border);
+  border-radius: 14px;
+  padding: 10px;
+  display: flex; flex-direction: column; gap: 8px;
+  position: relative; backdrop-filter: blur(2px);
+  height: 25vh;
+  margin-bottom: 10px;
+}
+
+#playmat .zone h2 {
+  margin: 0; font-size: clamp(12px, 1.1vw, 16px);
+  letter-spacing: .08em; font-weight: 700; text-transform: uppercase;
+  color: var(--subtext);
+}
+
+#playmat .slots { display: grid; gap: 8px; }
+#playmat .slots.row-2 { grid-template-columns: repeat(2, 1fr); }
+#playmat .slots.row-3 { grid-template-columns: repeat(3, 1fr); }
+#playmat .slots.row-5 { grid-template-columns: repeat(5, 1fr); }
+#playmat .slots.row-6 { grid-template-columns: repeat(6, 1fr); }
+#playmat .slots.stack-2 { grid-template-rows: repeat(2, 1fr); }
+
+#playmat .slot {
+  /* border: 2px dashed var(--slot-border); */
+  /* border-radius: 10px; */
+  min-height: 0;
+  display: grid; 
+  place-items: center;
+  /* font-size: clamp(10px, 0.9vw, 13px); */
+  color: var(--subtext); user-select: none;
+}
+
+/* placements */
+#playmat .left-top      { grid-column: 1 / 2;  grid-template-rows: 1fr 1fr; gap: 10px; }
+#playmat .left-bottom   { grid-column: 1 / 2;  grid-template-columns: 1fr 1fr; gap: 10px; }
+#playmat .right-top     { grid-column: 4 / 5;  grid-template-rows: 1fr 1fr; gap: 10px;}
+#playmat .right-mid     { grid-column: 4 / 5;  }
+#playmat .right-bottom  { grid-column: 4 / 5;  }
+/* #playmat .right-bottom  { grid-column: 4 / 5; grid-row: 4 / 5; } */
+#playmat .field         { grid-column: 2 / 4; /*grid-row: 2 / 4;*/  grid-template-rows: 1fr 1fr; gap: 10px; margin-bottom: 10px;}
+
+#playmat .brand { position: absolute; right: 18px; bottom: 12px;
+  font-size: clamp(10px, 0.9vw, 12px); color: rgba(255,255,255,0.5); letter-spacing: .08em; }
+
+/* Alignment grid overlay */
+#playmat .overlay {
+  display: none;
+  position: absolute; inset: calc(var(--bleed) + 6px);
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: calc((100% - 30px) / 10) calc((100% - 30px) / 6);
+  border-radius: 10px; pointer-events: none;
+}
+#playmat .overlay.active { display: block; }
+
+#t_Footer{
+    display: none;
+}
+.t-Header-branding{
+    display: none;
+}
+/* Mobile tweaks */
+/* @media (max-width: 720px) {
+  #playmat .grid { gap: 8px; }
+  #playmat .zone { padding: 8px; border-width: 1.5px; }
+  #playmat .slot { border-width: 1.5px; }
+} */
+
+/* Print: hide APEX chrome and shadows if needed */
+/* @media print {
+  #playmat .toggle { display: none !important; }
+  #playmat .mat { box-shadow: none; }
+} */
+
+dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
