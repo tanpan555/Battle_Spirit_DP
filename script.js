@@ -1,4 +1,4 @@
-const test_deck =[
+let test_deck =[
     {
       "cid_id": 1,
       "card_id": "1",
@@ -138,6 +138,8 @@ let player1_core = {
 
 };
 
+let coin_result ;
+
 function add_core(p_zone,p_amt){
     const selected_zone = document.querySelector('div[zone="'+p_zone+'"]');
     if(p_zone == 'LIFE'){
@@ -271,7 +273,69 @@ function card_function(p_cid,p_func){
 
 }
 
+function open_dialog(p_type){
+  const dialog = document.getElementById("Dialog");
+  p_type = p_type || 'COIN';
 
-// const dialog = document.getElementById("myDialog");
-// dialog.showModal();
-// dialog.close();
+  if(p_type == 'COIN'){
+      document.getElementById("Dialog_title").innerText = "ทอยมาสิ หัว/ก้อย ?";
+      const coin = document.createElement("div");   coin.id = "coin"; 
+      const sideA = document.createElement("div");  sideA.className = "side-a";
+      const sideB = document.createElement("div");  sideB.className = "side-b";
+      coin.appendChild(sideA);  coin.appendChild(sideB);
+
+      const button_container = document.createElement("div"); button_container.classList.add("button-container");
+      const head = document.createElement("button"); head.onclick = function(){ flip_coin('HEAD'); }; head.innerText = "HEAD";
+      const tail = document.createElement("button"); tail.onclick = function(){ flip_coin('TAIL'); }; tail.innerText = "TAIL";
+      button_container.appendChild(head); button_container.appendChild(tail);
+
+      document.getElementById("Dialog_detail").appendChild(coin);
+      document.getElementById("Dialog_detail").appendChild(button_container);
+      dialog.showModal();
+      return;
+  }
+  
+}
+
+function close_dialog(){
+  const dialog = document.getElementById("Dialog");
+  dialog.close();
+  document.getElementById("Dialog_title").innerText = "";
+  document.getElementById("Dialog_detail").innerText = "";
+}
+
+function flip_coin(p_side) {
+  var flipResult = Math.random();
+  var coin = document.getElementById('coin');
+  coin.classList.remove('heads');
+  coin.classList.remove('tails');
+  document.getElementById("Dialog_detail").removeChild(document.getElementById("Dialog_detail").lastChild);
+    setTimeout(function(){
+      if(flipResult <= 0.5){
+        coin.classList.add('heads');
+        coin_result = 'HEAD';
+      }
+      else{
+        coin.classList.add('tails');
+        coin_result = 'TAIL';
+      }
+    }, 100);
+    setTimeout(function(){
+      let result = '';
+      if(p_side){
+          if(p_side == coin_result) result = "คุณทายถูก";
+          else result = "คุณทายผิด";
+      }
+      // document.getElementById("Dialog_detail").appendChild(document.createElement("p")).innerText = "ผลการทอยเหรียญ = " + coin_result + " (" + result + ")";
+      const button_container = document.createElement("div"); button_container.classList.add("button-container");
+      const First = document.createElement("button"); First.onclick = function(){ sel_turn('FIRST'); }; First.innerText = "First";
+      const Second = document.createElement("button"); Second.onclick = function(){ sel_turn('LAST'); }; Second.innerText = "Second";
+      button_container.appendChild(First); button_container.appendChild(Second);
+      document.getElementById("Dialog_title").innerText = "เลือกเล่นก่อนหรือหลัง ?";
+      document.getElementById("Dialog_detail").appendChild(button_container);
+    }, 3100);
+}
+function sel_turn(p_side) {
+    console.log("เลือกเล่นเป็น : " + p_side);
+    close_dialog();
+}

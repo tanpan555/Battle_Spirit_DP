@@ -10,9 +10,9 @@
     </head>
     <body>
 
-        <dialog id="myDialog">
-            <h2>Hello 👋</h2>
-            <p>This is a native HTML dialog element.</p>
+        <dialog id="Dialog">
+            <h2 id="Dialog_title"></h2>
+            <p id="Dialog_detail" style="margin-bottom: unset;"></p>
         </dialog>
 
     <div id="playmat">
@@ -96,6 +96,7 @@
             </div>
         </div>
     </div>
-    <button class="bs_button" onclick="start_game();"> กด สิวะ</button>
+    <button class="bs_button" onclick="start_game();"> กดสิ</button>
+    <button class="bs_button" onclick="open_dialog();"> กด Dialog สิ</button>
     </body>
 </html>
