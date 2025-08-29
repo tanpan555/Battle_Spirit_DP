@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            .dialog {
+                border: none;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+            #Dialog_title {
+                margin-top: 0;
+                text-align: center;
+            }
+            .CARD_INFO{
+                display: flex;
+                gap: 16px;
+                align-items: top;
+            }
+            .Label_info{
+                font-weight: bold;
+                margin-top: 8px;
+                display: flex;
+                gap: 4px;
+                align-items: center;
+            }
+            .detail_info{
+                font-weight: normal;
+            }
+            .CARD_EFFECT_LIST{
+                margin-left: 16px;
+                margin-top: 10px;
+                padding: 10px;
+                border: 3px black solid;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .CARD_EFFECT_LIST:hover{
+                background-color: red;
+                transition: background-color 0.5s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dialog">
+            <h2 id="Dialog_title">ทดสอบชื่อ</h2>
+            <p id="Dialog_detail" style="margin-bottom: unset;">
+                <div class="CARD_INFO">
+                    <img class="CARD_CSS" src="images/SLEEVE.png">
+                    <div class="CARD_TEXT">
+                        <div class="Label_info">Card Type : <div class="detail_info">Nexus</div></div>
+                        <div class="Label_info">Color : <div class="detail_info">Red</div></div>
+                        <div class="Label_info">Cost : <div class="detail_info">2</div></div>
+                        <div class="Label_info">Reductions : <div class="detail_info"><img src="images\Reduct_Red.png"></div></div>
+                        <div class="Label_info">Families : <div class="detail_info"></div></div>
+                    </div>
+                    <div class="CARD_EFFECT">
+                        <div class="Label_info"> Effect : </div>
+                        <div class="detail_info">
+                            <div class="CARD_EFFECT_LIST">1. เมื่อ Nexus นี้เข้าสู่สนามรบ คุณสามารถจั่วการ์ด 1 ใบ</div>
+                            <div class="CARD_EFFECT_LIST">2. คุณสามารถจ่าย 2 [R] : สร้าง Spirit 1 ตัวที่มี Cost 2 หรือต่ำกว่า จากมือของคุณเข้าสู่สนามรบโดยไม่ต้องจ่ายค่าตัวมัน</div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+            </div>
+        </body>
+    </html>
