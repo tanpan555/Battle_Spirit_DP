@@ -15,89 +15,59 @@
         <button class="bs_button" onclick="open_dialog('COIN');"> ทอยเหรียญมาๆ
         </button>
         <dialog id="Dialog">
-            <h2 id="Dialog_title"></h2>
+            <h2 id="Dialog_title"></h2><button id="closeButton" onclick="close_dialog();">X</button>
             <p id="Dialog_detail" style="margin-bottom: unset;"></p>
         </dialog>
-        <div id="playmat">
+        <div id="playmat" class="playmat_p1">
             <div class="wrapper">
                 <div class="mat">
-                    <div class="safe" aria-hidden="true"></div>
+                    <!-- <div class="safe" aria-hidden="true"></div> -->
                     <div class="grid">
-                        <!-- LEFT SIDE -->
                         <div class="left-top">
                             <section class="zone">
-                                <h2>Burst</h2>
-                                <div class="slots row-2 ">
-                                    <div zone="MIRAGE"
-                                        onclick="add_card('MIRAGE')"
-                                        class="slot"></div>
-                                    <div zone="BURST" onclick="set_burst()"
-                                        class="slot">
-                                    </div>
+                                <h2>Burst</h2><div class="slots row-2 ">
+                                    <div zone="MIRAGE" onclick="" class="slot"></div>
+                                    <div zone="BURST"  onclick="" class="slot"></div>
                                 </div>
                             </section>
                             <section class="zone" onclick="add_core('LIFE',1)"
                                 oncontextmenu="remove_core('LIFE',1); return false;">
-                                <h2>Life</h2>
-                                <div zone="LIFE" class="slots row-3 stack-2">
-                                    <!-- <div class="slot"><img class="Blue_core"></div> -->
-                                </div>
+                                <h2>Life</h2><div zone="LIFE" class="slots row-3 stack-2"></div>
                             </section>
                             <section class="zone"
                                 onclick="add_core('RESERVE',1)"
                                 oncontextmenu="remove_core('RESERVE',1); return false;">
-                                <h2>Reserve</h2>
-                                <div zone="RESERVE"
-                                    class="slots row-6 stack-2">
-                                </div>
+                                <h2>Reserve</h2><div zone="RESERVE"class="slots row-6 stack-2"></div>
                             </section>
                         </div>
-
-                        <!-- MID SIDE -->
                         <section class="field">
-                            <div class="zone" style>
-                                <h2>Spirits Zone</h2>
-                                <div zone="SPIRIT" class="slots row-5">
-                                </div>
-                            </div>
-                            <div class="zone" style>
-                                <h2>Nexus</h2>
-                                <div zone="NEXUS" class="slots row-5">
-                                </div>
-                            </div>
-                            <div class="zone"
-                                style=" height: fit-content;">
-                                <h2>Hand</h2>
-                                <div zone="HAND" id="P1_HAND">
-                                </div>
-                            </div>
+                            <div class="zone" style><h2>Spirits      </h2><div zone="SPIRIT" class="board"></div></div>
+                            <div class="zone" style><h2>Nexus / Magic</h2><div zone="NEXUS"  class="board"></div></div>
+                            <div class="zone"style=" height: fit-content;"><h2>Hand</h2><div zone="HAND" id="P1_HAND"></div></div>
                         </section>
-                        <!-- RIGHT rail -->
                         <div class="right-top">
                             <section class="zone" style="height: auto;">
-                                <h2>Counter</h2>
-                                <div onclick="add_counter(1)" zone="COUNTER"
-                                    class="slots">
+                                <h2>Counter</h2><div onclick="add_counter(1)" zone="COUNTER"class="slots">
                                     <div class="slot COUNTER_NUMBER ">0</div>
                                 </div>
                             </section>
                             <section class="zone">
                                 <h2>Deck</h2>
-                                <div zone="DECK" class="slots"
-                                    onclick="draw_deck(1)">
-                                    <div class="slot">
-                                        <img id="P1_DECK" class="CARD_CSS">
+                                    <div zone="DECK" class="slots" onclick="draw_deck(1)">
+                                        <div class="slot">
+                                            <img id="P1_DECK" class="CARD_CSS">
                                     </div>
                                 </div>
                             </section>
                             <section class="zone">
                                 <h2>Graveyard</h2>
-                                <div class="slots">
+                                    <div zone="GY" class="slots">
+                                        <div class="slot">
+                                            <img id="P1_GY" class="CARD_CSS">
+                                    </div>
                                 </div>
                             </section>
                         </div>
-                        <!-- CENTER field -->
-
                     </div>
                 </div>
             </div>

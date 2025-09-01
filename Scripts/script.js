@@ -1,129 +1,7 @@
-let test_deck =[
-    {
-      "cid_id": 1,
-      "card_id": "1",
-      "card_name": "SD68-X01",
-      "card_cost": 8,
-      "card_cost_reduct": "red,red,red,god",
-      "card_type": "spirit",
-      "card_families": "astral dragon",
-      "card_image": "SD68-X01"
-    },
-    {
-      "cid_id": 2,
-      "card_id": "1",
-      "card_name": "SD68-X01",
-      "card_cost": 8,
-      "card_cost_reduct": "red,red,red,god",
-      "card_type": "spirit",
-      "card_families": "astral dragon",
-      "card_image": "SD68-X01"
-    },
-    {
-      "cid_id": 3,
-      "card_id": "1",
-      "card_name": "SD68-X01",
-      "card_cost": 8,
-      "card_cost_reduct": "red,red,red,god",
-      "card_type": "spirit",
-      "card_families": "astral dragon",
-      "card_image": "SD68-X01"
-    },
-    {
-      "cid_id": 4,
-      "card_id": "2",
-      "card_name": "SD68-CX01",
-      "card_cost": 2,
-      "card_cost_reduct": "red",
-      "card_type": "nexus",
-      "card_families": null,
-      "card_image": "SD68-CX01"
-    },
-    {
-      "cid_id": 5,
-      "card_id": "2",
-      "card_name": "SD68-CX01",
-      "card_cost": 2,
-      "card_cost_reduct": "red",
-      "card_type": "nexus",
-      "card_families": null,
-      "card_image": "SD68-CX01"
-    },
-    {
-      "cid_id": 6,
-      "card_id": "2",
-      "card_name": "SD68-CX01",
-      "card_cost": 2,
-      "card_cost_reduct": "red",
-      "card_type": "nexus",
-      "card_families": null,
-      "card_image": "SD68-CX01"
-    },
-    {
-      "cid_id": 7,
-      "card_id": "3",
-      "card_name": "SD68-003",
-      "card_cost": 4,
-      "card_cost_reduct": "red,red,god",
-      "card_type": "spirit",
-      "card_families": null,
-      "card_image": "SD68-003"
-    },
-    {
-      "cid_id": 8,
-      "card_id": "3",
-      "card_name": "SD68-003",
-      "card_cost": 4,
-      "card_cost_reduct": "red,red,god",
-      "card_type": "spirit",
-      "card_families": null,
-      "card_image": "SD68-003"
-    },
-    {
-      "cid_id": 9,
-      "card_id": "3",
-      "card_name": "SD68-003",
-      "card_cost": 4,
-      "card_cost_reduct": "red,red,god",
-      "card_type": "spirit",
-      "card_families": null,
-      "card_image": "SD68-003"
-    },
-    {
-      "cid_id": 10,
-      "card_id": "4",
-      "card_name": "SD68-005",
-      "card_cost": 3,
-      "card_cost_reduct": "red,red",
-      "card_type": "magic",
-      "card_families": null,
-      "card_image": "SD68-005"
-    },
-    {
-      "cid_id": 11,
-      "card_id": "4",
-      "card_name": "SD68-005",
-      "card_cost": 3,
-      "card_cost_reduct": "red,red",
-      "card_type": "magic",
-      "card_families": null,
-      "card_image": "SD68-005"
-    },
-    {
-      "cid_id": 12,
-      "card_id": "4",
-      "card_name": "SD68-005",
-      "card_cost": 3,
-      "card_cost_reduct": "red,red",
-      "card_type": "magic",
-      "card_families": null,
-      "card_image": "SD68-005"
-    }
-  ]
-
+let test_deck = [{"cid_id":1,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"Flash - Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)\\r\\nBy sending your  to the Trash, pay one cost from the target to summon this card from the Hand.\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2 </div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">\\r\\nDestroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":2,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"Flash - Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)\\r\\nBy sending your  to the Trash, pay one cost from the target to summon this card from the Hand.\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2 </div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">\\r\\nDestroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":3,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":4,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":5,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":null},{"cid_id":6,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":null},{"cid_id":7,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":8,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":9,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":null},{"cid_id":10,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":null},{"cid_id":11,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":null},{"cid_id":12,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":null}];
 let player1_board ={
     CARD_IN_HAND   : [],
-    CARD_IN_BUSRT  : [],
+    CARD_IN_BURST  : [],
     CARD_IN_MIRAGE : [],
     CARD_IN_BOARD  : [],
     CARD_IN_DECK   : [],
@@ -139,7 +17,6 @@ let player1_core = {
     core_trash : 0,
     soul_core_trash : 0,
     counter : 0,
-
 };
 
 let coin_result ;
@@ -317,6 +194,26 @@ function load_card(){
   const hand = document.querySelector('div[zone="'+'HAND'+'"]');
   const spirit_zone = document.querySelector('div[zone="'+'SPIRIT'+'"]');
   const nexus_zone = document.querySelector('div[zone="'+'NEXUS'+'"]');
+  const burst_zone = document.querySelector('div[zone="'+'BURST'+'"]');
+  const mirage_zone = document.querySelector('div[zone="'+'MIRAGE'+'"]');
+    if(burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 1) {
+        burst_zone.firstElementChild.remove();
+        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/SLEEVE.png">');
+    }else if(!burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 1){
+        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/SLEEVE.png">');
+    }else if(burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 0){
+        burst_zone.firstElementChild.remove();
+    }
+
+    if(mirage_zone.firstElementChild && player1_board.CARD_IN_MIRAGE.length == 1) {
+        mirage_zone.firstElementChild.remove();
+        mirage_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/'+player1_board.CARD_IN_MIRAGE[0]['card_image']+'.webp">');
+    }else if(!mirage_zone.firstElementChild && player1_board.CARD_IN_MIRAGE.length == 1){
+        mirage_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/'+player1_board.CARD_IN_MIRAGE[0]['card_image']+'.webp">');
+    }else if(mirage_zone.firstElementChild && player1_board.CARD_IN_MIRAGE.length == 0){
+        mirage_zone.firstElementChild.remove();
+    }
+    
   while (hand.firstElementChild) {hand.firstElementChild.remove();}
   while (spirit_zone.firstElementChild) {spirit_zone.firstElementChild.remove();}
   while (nexus_zone.firstElementChild) {nexus_zone.firstElementChild.remove();}
@@ -327,10 +224,14 @@ function load_card(){
   player1_board.CARD_IN_BOARD.forEach(function(v,i,a){
       if(v['card_type'] == 'spirit'){
           spirit_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/'+v['card_image']+'.webp">');
-      }else if(v['card_type'] == 'nexus'){
+      }else if(v['card_type'] == 'nexus' || v['card_type'] == 'magic'){
           nexus_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/'+v['card_image']+'.webp">');
       }
   })
+  if(player1_board.CARD_IN_GY.length > 0){
+    document.getElementById('P1_GY').src = 'images/'+player1_board.CARD_IN_GY[player1_board.CARD_IN_GY.length-1]['card_image'] + '.webp';
+  }
+  
 
 }
 
@@ -363,26 +264,11 @@ function load_core(){
     counter_zone.innerHTML = player1_core.counter;
 }
 
-function set_burst(p_cid){
-    const selected_zone = document.querySelector('div[zone="'+'BURST'+'"]');
-    while (selected_zone.firstElementChild) {
-        selected_zone.firstElementChild.remove();
-        send_GY();
-    }
-    if(p_cid) selected_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/SLEEVE.png">');
-}
-
-function send_GY(card_id) {
-    player1_board.CARD_IN_GY.push(card_id);
-    load_card();
-}
-
 function open_dialog(p_type,p_cid_id){
   const dialog = document.getElementById("Dialog");
+  document.getElementById("Dialog_title").innerText = "";
+  document.getElementById("Dialog_detail").innerText = "";
   let p_card = test_deck.find(card => card.cid_id == p_cid_id);
-  console.log(p_card);
-  console.log(p_type);
-  console.log(p_cid_id);
   if(p_type == 'COIN'){
       document.getElementById("Dialog_title").innerText = "ทอยมาสิ หัว/ก้อย ?";
       const coin = document.createElement("div");   coin.id = "coin"; 
@@ -402,6 +288,9 @@ function open_dialog(p_type,p_cid_id){
   }else if(p_type == 'CARD' && p_card){
       document.getElementById("Dialog_title").innerText = p_card['card_name']; //+'\n' +
       let reduct_html = '';
+      let v_btn = '',v_eff = '';
+      let v_skills = JSON.parse(p_card['card_skills']) , v_levels = JSON.parse(p_card['card_levels']);
+      console.log(v_skills);
       p_card['card_cost_reduct'].split(',').forEach(function(v,i,a){
           if(v == 'red') reduct_html += '<img src="images/Reduct_Red.png">';
           else if(v == 'blue') reduct_html += '<img src="images/Reduct_Blue.png">';
@@ -409,7 +298,26 @@ function open_dialog(p_type,p_cid_id){
           else if(v == 'god') reduct_html += '<img src="images/Reduct_God.png">';
           else if(v == 'colorless') reduct_html += '<img src="images/Reduct_Colorless.png">';
       });
-
+      if (p_card['card_type'] == 'magic'){
+        v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\');">Use Magic</button>'+'\n';
+      }else if (p_card['card_type'] == 'spirit'){
+        v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\');">Summon</button>'+'\n';
+      }else if (p_card['card_type'] == 'nexus'){
+        v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\');">Deploy</button>'+'\n';
+      }
+      
+      if (p_card['is_burst'] == 'Y'){
+        v_btn += '<button class="action_btn" onclick="set_burst(\''+p_card['cid_id']+'\');">Set Burst</button>'+'\n';
+      }
+      if (p_card['is_mirage'] == 'Y'){
+        v_btn += '<button class="action_btn" onclick="set_mirage(\''+p_card['cid_id']+'\');">Set Mirage</button>'+'\n';
+      }
+      if(v_skills){
+        v_skills.forEach(function (v,i,a){
+          v_eff += '<div class="CARD_EFFECT_LIST" onclick="use_skill(\''+v['CARD_SKILL'].replaceAll("'",'`')+'\' , \''+'1'+'\')">'+v['CARD_SKILL_DESC']+'</div>'+'\n' ;
+        });
+      }
+      
       let detail = 
         '<div class="CARD_INFO">'+'\n' +
         '<img class="CARD_CSS_INFO" src="'+get_img(p_card['card_image'])+'">'+'\n' +
@@ -424,22 +332,72 @@ function open_dialog(p_type,p_cid_id){
         '<div class="CARD_EFFECT">'+'\n' +
         '<div class="Label_info"> Effect : </div>'+'\n' +
         '<div class="detail_info">'+'\n' +
-        '<div class="CARD_EFFECT_LIST" onclick="use_skill(\''+p_card['cid_id']+'\' , \''+'1'+'\')">1. เมื่อ Nexus นี้เข้าสู่สนามรบ คุณสามารถจั่วการ์ด 1 ใบ</div>'+'\n' +
-        '<div class="CARD_EFFECT_LIST" onclick="use_skill(\''+p_card['cid_id']+'\' , \''+'2'+'\')">2. คุณสามารถจ่าย 2 [R] : สร้าง Spirit 1 ตัวที่มี Cost 2 หรือต่ำกว่า จากมือของคุณเข้าสู่สนามรบโดยไม่ต้องจ่ายค่าตัวมัน</div>'+'\n' +
-        '</div></div></div></div>';
-        console.log(detail);
-
+        v_eff +
+        '</div>'+'\n' +
+        '<div class="button-container" style="justify-content: center; margin-top: 10px;">'+'\n' +
+        v_btn +
+        '</div></div></div>';
 
       document.getElementById("Dialog_detail").insertAdjacentHTML('beforeend',detail);
       dialog.showModal();
       return;
   }
-  
 }
 
-function use_skill(p_card_id,p_skill_no){
-    p_card = test_deck.find(card => card.cid_id == p_card_id);
-    alert("ใช้สกิลของ : " + p_card['card_name'] + ' สกิลที่ : ' + p_skill_no);
+async function use_card(p_cid_id){
+    const success = await get_card_to(
+        player1_board.CARD_IN_HAND,
+        player1_board.CARD_IN_BOARD,
+        p_cid_id
+    );
+    if (success) {
+        load_card();
+        close_dialog();
+    }
+}
+
+function set_mirage(p_cid_id){
+    const success = get_card_to(
+        player1_board.CARD_IN_HAND,
+        player1_board.CARD_IN_MIRAGE,
+        p_cid_id
+    );  
+    if (success) {
+        load_card();
+        close_dialog();
+    }
+}
+
+function set_burst(p_cid_id){
+    const success = get_card_to(
+        player1_board.CARD_IN_HAND,
+        player1_board.CARD_IN_BURST,
+        p_cid_id
+    );
+    if (success) {
+        load_card();
+        close_dialog();
+    }
+}
+
+function set_GY(p_get_from,p_cid_id) {
+    const success = get_card_to(
+        p_get_from,
+        player1_board.CARD_IN_GY,
+        p_cid_id
+    );
+    if (success) {
+        load_card();
+        close_dialog();
+    }
+    // load_card();
+}
+
+function use_skill(p_raw_code){
+    // p_card = test_deck.find(card => card.cid_id == p_card_id);
+    // alert("ใช้สกิลของ : " + p_card['card_name'] + ' สกิลที่ : ' + p_skill_no);
+    let fn = new Function(p_raw_code);
+    fn();
     close_dialog();
 }
 
@@ -489,3 +447,15 @@ function sel_turn(p_side) {
 function get_img(p_card_image){
     return 'images/'+p_card_image+'.webp';
 }
+
+async function get_card_to(p_list_card_from, p_list_card_to, p_cid_id){
+  return new Promise((resolve) => {
+    const index = p_list_card_from.findIndex(card => card.cid_id == p_cid_id);
+    if (index > -1) { 
+      p_list_card_to.push(p_list_card_from[index]);
+      p_list_card_from.splice(index, 1); 
+    }
+    resolve(true);
+  });
+}
+

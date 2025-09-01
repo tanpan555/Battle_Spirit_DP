@@ -101,6 +101,7 @@ div[zone="HAND"]{
   grid-template-columns: 1.2fr 2.2fr 2.2fr 1.6fr;
   grid-template-rows: 1fr 1fr 2.2fr 1.2fr;
   gap: 10px;
+      height: 10px;
 }
 
 #playmat .zone {
@@ -213,13 +214,50 @@ div[zone="HAND"]{
     border: 3px black solid;
     border-radius: 10px;
     cursor: pointer;
+    width: 50vw;
+    display: flex;
+    flex-direction: column; 
+    gap: 4px;
 }
 .CARD_EFFECT_LIST:hover{
     background-color: red;
     transition: background-color 0.5s ease;
 }
+
+.CARD_EFFECT_LIST .row {
+  display: flex;
+  gap: 8px; 
+  align-items: center;
+}
+
+.CARD_EFFECT_LIST .card_ability {
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.CARD_EFFECT_LIST .EFF_H {
+}
+
+.CARD_EFFECT_LIST .EFF_B {
+}
+
 .CARD_CSS_INFO{
-  width: 17vw;
+  width: 20vw;
+}
+
+.action_btn{
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 2px 1px 4px black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.action_btn:hover{
+  box-shadow: 2px 1px 0px black;
+  transition: all 0.5s ease-in-out;
 }
 
 #coin {
@@ -321,4 +359,20 @@ div[zone="RESERVE"] , div[zone="TRASH"]{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px; /* Adjust as needed for desired spacing from top */
+  right: 10px; /* Adjust as needed for desired spacing from right */
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
 }
