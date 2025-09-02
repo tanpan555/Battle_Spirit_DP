@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Battle Spirits</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="Scripts\script.js"></script>
@@ -12,12 +13,18 @@
     </head>
     <body>
         <button class="bs_button" onclick="start_game();"> Load Deck</button>
-        <button class="bs_button" onclick="open_dialog('COIN');"> ทอยเหรียญมาๆ
-        </button>
+        <button class="bs_button" onclick="open_dialog('COIN');"> ทอยเหรียญมาๆ</button>
+        <input id="deck_id" type="text" value="0"></input>
+
         <dialog id="Dialog">
-            <h2 id="Dialog_title"></h2><button id="closeButton" onclick="close_dialog();">X</button>
+            <h2 id="Dialog_title" class="Dialog_title"></h2><button class="closeButton" onclick="close_dialog();">X</button>
             <p id="Dialog_detail" style="margin-bottom: unset;"></p>
         </dialog>
+        <dialog id="Dialog_list">
+            <h2 id="Dialog_list_title" class="Dialog_title"></h2><button class="closeButton" onclick="close_dialog1();">X</button>
+            <p id="Dialog_list_detail" style="margin-bottom: unset;padding: 10px;"></p>
+        </dialog>
+
         <div id="playmat" class="playmat_p1">
             <div class="wrapper">
                 <div class="mat">

@@ -1,4 +1,6 @@
-let test_deck = [{"cid_id":1,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"Flash - Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)\\r\\nBy sending your  to the Trash, pay one cost from the target to summon this card from the Hand.\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2 </div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">\\r\\nDestroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":2,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"Flash - Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)\\r\\nBy sending your  to the Trash, pay one cost from the target to summon this card from the Hand.\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2 </div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">\\r\\nDestroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div>\\r\\n<div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":3,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":4,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":5,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":null},{"cid_id":6,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":null},{"cid_id":7,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":8,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":null},{"cid_id":9,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":null},{"cid_id":10,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":null},{"cid_id":11,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":null},{"cid_id":12,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":null}];
+let test_deck = [{"cid_id":1,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)</div></div><div class=\\\"EFF_B\\\">By sending your  to the Trash, pay one cost from the target to summon this card from the Hand.</div>\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2</div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div><div class=\\\"EFF_B\\\">Destroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div><div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":2,"card_id":"1","card_name":"The SunConcluserDragon Apollonia-Vern","card_cost":8,"card_cost_reduct":"red,red,red,god","card_type":"spirit","card_families":"Devotee, Concluser, Astral Dragon","card_image":"SD68-X01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":10000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":13000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":5,\"CARD_POWER\":16000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('Manifest');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Manifest: \\\"Contractor Apollon\\\" & C7 or more (Your Turn)</div></div><div class=\\\"EFF_B\\\">By sending your  to the Trash, pay one cost from the target to summon this card from the Hand.</div>\",\"CARD_SUMMON_TYPE\":\"manifest\",\"CARD_SUMMON_COND\":\"[{'have_nexus_name : 'Contractor Apollon' },{ 'have_counter_more_equal' : '7'}]\",\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":\"console.log('Attack');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Unleash: 2</div><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Attacks)</div></div><div class=\\\"EFF_B\\\">Destroy an opposing Spirit/Ultimate with the highest BP, and for each symbol on the destroyed target, send an opposing Life to the Trash. By sending two cores from your Red Grandwalker Nexuses to this Spirit, this destruction effect can't be prevented by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":\"console.log('FLASH ATTACK');\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] Flash - (When Attacks)</div></div><div class=\\\"EFF_B\\\">Once per turn, you can negate an opposing active White Magic/Accel effect, other than on-field effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"}]"},{"cid_id":3,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Neo-Core Charge: (Astral Dragon/Devotee/Concluser & Cost 3 or more)</div></div>\",\"CARD_SUMMON_TYPE\":\"neo-core_charge\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Revive</div><div class=\\\"EFF_H\\\">Main - (Once per Turn: Same Name) You can deploy this card from Soul State.</div></div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Contract Skill: 2</div><div class=\\\"EFF_H\\\">[LV1][LV2] Flash -</div></div><div class=\\\"EFF_B\\\">(Once per turn, send two cores from this Nexus to the Void) Your counters +2. Then, if it's the Attack Step, ignoring \\\"BP+\\\" and \\\"give +BP\\\" effects, destroy an opposing 7000 BP or less Spirit/Ultimate.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"6\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Contract Field</div><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">(Can't Stack) When your \\\"Astral Dragon\\\" family Spirit attacks, you can reveal a card from your decktop. If it's a \\\"Devotee\\\"/\\\"Concluser\\\" family card, send an opposing Life to the Reserve. Add the revealed card to the Hand.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":4,"card_id":"2","card_name":"The FlameWheelContractor Apollon","card_cost":2,"card_cost_reduct":"red","card_type":"nexus","card_families":"Grandwalker, Olym","card_image":"SD68-CX01","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":0,\"CARD_POWER\":null},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":6,\"CARD_POWER\":null}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Neo-Core Charge: (Astral Dragon/Devotee/Concluser & Cost 3 or more)</div></div>\",\"CARD_SUMMON_TYPE\":\"neo-core_charge\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Revive</div><div class=\\\"EFF_H\\\">Main - (Once per Turn: Same Name) You can deploy this card from Soul State.</div></div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Contract Skill: 2</div><div class=\\\"EFF_H\\\">[LV1][LV2] Flash -</div></div><div class=\\\"EFF_B\\\">(Once per turn, send two cores from this Nexus to the Void) Your counters +2. Then, if it's the Attack Step, ignoring \\\"BP+\\\" and \\\"give +BP\\\" effects, destroy an opposing 7000 BP or less Spirit/Ultimate.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"Y\"},{\"CARD_LEVEL\":\"6\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"card_ability\\\">Contract Field</div><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">(Can't Stack) When your \\\"Astral Dragon\\\" family Spirit attacks, you can reveal a card from your decktop. If it's a \\\"Devotee\\\"/\\\"Concluser\\\" family card, send an opposing Life to the Reserve. Add the revealed card to the Hand.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":5,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":"[{\"CARD_LEVEL\":\"1,2\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2] (When Summoned)</div></div><div class=\\\"EFF_B\\\">Return a non-Cost 4 \\\"Astral Dragon\\\"/\\\"Olym\\\" family card from your Trash to the Hand.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">When your Hand increases via your \\\"Astral Dragon\\\"/\\\"Olym\\\" family effect, you can destroy an opposing 5000 BP or less Spirit/Ultimate. For each core on all your \\\"Contractor Apollon\\\" combined, increase the limit of this \\\"BP Destruction effect\\\" by +2000.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":6,"card_id":"3","card_name":"Folk-StarDragon","card_cost":4,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-003","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":6000}]","card_skills":"[{\"CARD_LEVEL\":\"1,2\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2] (When Summoned)</div></div><div class=\\\"EFF_B\\\">Return a non-Cost 4 \\\"Astral Dragon\\\"/\\\"Olym\\\" family card from your Trash to the Hand.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">When your Hand increases via your \\\"Astral Dragon\\\"/\\\"Olym\\\" family effect, you can destroy an opposing 5000 BP or less Spirit/Ultimate. For each core on all your \\\"Contractor Apollon\\\" combined, increase the limit of this \\\"BP Destruction effect\\\" by +2000.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":7,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"draw_deck(2)\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Main</div></div><div class=\\\"EFF_B\\\">Draw a card. Then, you can reveal four cards from your decktop. Among them, add either an \\\"Apollon\\\" Grandwalker Nexus card, or a \\\"Concluser\\\" family Spirit card to the Hand. Return any remaining cards to the deckbottom.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":8,"card_id":"4","card_name":"Star Dragon Draw","card_cost":3,"card_cost_reduct":"red,red","card_type":"magic","card_families":"Astral Dragon","card_image":"SD68-005","card_color":"red","is_mirage":"N","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":0,\"CARD_LEVEL_COST\":null,\"CARD_POWER\":null}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"draw_deck(2)\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Main</div></div><div class=\\\"EFF_B\\\">Draw a card. Then, you can reveal four cards from your decktop. Among them, add either an \\\"Apollon\\\" Grandwalker Nexus card, or a \\\"Concluser\\\" family Spirit card to the Hand. Return any remaining cards to the deckbottom.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":9,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"set_mirage('this_cid_id')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Mirage: Cost 3 (img_red img_red)</div></div>\",\"CARD_SUMMON_TYPE\":\"mirage\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"1,2\",\"CARD_SKILL\":\"console.log('CONT')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2]</div></div><div class=\\\"EFF_B\\\">Your Red Spirits/Ultimates can't be returned to the Hand/Deck by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2\",\"CARD_SKILL\":\"console.log('CONT')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">While your \\\"Astral Dragon\\\" family Spirit is attacking, the opponent can't end the Attack Step via effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":10,"card_id":"5","card_name":"WhiteHole Dragon","card_cost":3,"card_cost_reduct":"red,red","card_type":"spirit","card_families":"Astral Dragon","card_image":"SD68-RV002","card_color":"red","is_mirage":"Y","is_burst":"N","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":3000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":2,\"CARD_POWER\":5000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"set_mirage('this_cid_id')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">Mirage: Cost 3 (img_red img_red)</div></div>\",\"CARD_SUMMON_TYPE\":\"mirage\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"1,2\",\"CARD_SKILL\":\"console.log('CONT')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2]</div></div><div class=\\\"EFF_B\\\">Your Red Spirits/Ultimates can't be returned to the Hand/Deck by opposing effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2\",\"CARD_SKILL\":\"console.log('CONT')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2] (Your Attack Step)</div></div><div class=\\\"EFF_B\\\">While your \\\"Astral Dragon\\\" family Spirit is attacking, the opponent can't end the Attack Step via effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":11,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('skill')\",\"CARD_SKILL_DESC\":\"<div class=\\\"EFF_B\\\">When this card is revealed by the Contract Field of your “Contractor Apollon”, you can summon it by paying one cost.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('BURST')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[ Burst: After your Spirit/Nexus is destroyed by the Opponent ]</div></div><div class=\\\"EFF_B\\\">Summon this card without paying the cost.</div>\",\"CARD_SUMMON_TYPE\":\"BURST\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Summoned)</div></div><div class=\\\"EFF_B\\\">You can destroy an opposing 10000 BP or less Spirit/Ultimate. When summoned via an effect, this “BP Destruction effect” ignores “BP+” and “give + BP” effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] (When Attacks)</div></div><div class=\\\"EFF_B\\\">Destroy an opposing Nexus.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"},{"cid_id":12,"card_id":"6","card_name":"The ArdentStarDragon Zon-Balphard","card_cost":5,"card_cost_reduct":"red,red,god","card_type":"spirit","card_families":"Devotee, Astral Dragon","card_image":"SD68-004","card_color":"red","is_mirage":"N","is_burst":"Y","card_levels":"[{\"CARD_LEVEL\":1,\"CARD_LEVEL_COST\":1,\"CARD_POWER\":4000},{\"CARD_LEVEL\":2,\"CARD_LEVEL_COST\":3,\"CARD_POWER\":7000},{\"CARD_LEVEL\":3,\"CARD_LEVEL_COST\":4,\"CARD_POWER\":9000}]","card_skills":"[{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('skill')\",\"CARD_SKILL_DESC\":\"<div class=\\\"EFF_B\\\">When this card is revealed by the Contract Field of your “Contractor Apollon”, you can summon it by paying one cost.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"0\",\"CARD_SKILL\":\"console.log('BURST')\",\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[ Burst: After your Spirit/Nexus is destroyed by the Opponent ]</div></div><div class=\\\"EFF_B\\\">Summon this card without paying the cost.</div>\",\"CARD_SUMMON_TYPE\":\"BURST\",\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"1,2,3\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV1][LV2][LV3] (When Summoned)</div></div><div class=\\\"EFF_B\\\">You can destroy an opposing 10000 BP or less Spirit/Ultimate. When summoned via an effect, this “BP Destruction effect” ignores “BP+” and “give + BP” effects.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"},{\"CARD_LEVEL\":\"2,3\",\"CARD_SKILL\":null,\"CARD_SKILL_DESC\":\"<div class=\\\"row\\\"><div class=\\\"EFF_H\\\">[LV2][LV3] (When Attacks)</div></div><div class=\\\"EFF_B\\\">Destroy an opposing Nexus.</div>\",\"CARD_SUMMON_TYPE\":null,\"CARD_SUMMON_COND\":null,\"IS_FLASH\":\"N\"}]"}];
+
+
 let player1_board ={
     CARD_IN_HAND   : [],
     CARD_IN_BURST  : [],
@@ -9,15 +11,23 @@ let player1_board ={
     CARD_IN_BANISH : [],
 };
 
-let player1_core = {
-    core_life : 0,
-    soul_core_life : 0,
-    core_reserve : 0,
-    soul_core_reserve : 0,
-    core_trash : 0,
-    soul_core_trash : 0,
-    counter : 0,
-};
+function createCoreState() {
+    return {
+        core_life : 0,
+        soul_core_life : 0,
+        core_reserve : 0,
+        soul_core_reserve : 0,
+        core_trash : 0,
+        soul_core_trash : 0,
+        counter : 0,
+    };
+}
+
+let player1_core = createCoreState();
+let player1_core_paid = createCoreState();
+
+let player2_core = createCoreState();
+let player2_core_paid = createCoreState();7
 
 let coin_result ;
 
@@ -131,24 +141,46 @@ function add_counter(p_value){
     if(zone) zone.innerHTML = player1_core.counter;
 }
 
+async function test_get_deck(p_deck_id) {
+  const apiUrl = 'https://oracleapex.com/ords/wksp_rmutttransfer/bst/DECK?DECK_ID=' + p_deck_id;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {"Content-Type": "application/json" , "Access-Control-Allow-Origin" : "*"}
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }  
+}
+
 async function get_deck(p_deck_id) {
-//   const apiUrl = 'https://oracleapex.com/ords/wksp_rmutttransfer/bst/DECK?DECK_ID=' + p_deck_id;
-//   console.log("apiUrl:", apiUrl);
-//   try {
-//     const response = await fetch(apiUrl, {
-//       method: "GET",
-//       headers: {"Content-Type": "application/json"}
-//     });
-//     const data = await response.json();
-//     player1_board.CARD_IN_DECK = shuffle(data.items);
-//     return shuffle(data.items);
-//   } catch (error) {
-//     console.error("Error:", error);
-//     throw error;
-//   }
-    test_deck = shuffle(test_deck);
-    test_deck.forEach(function(v,i,a){ player1_board.CARD_IN_DECK.push(v); });
-    return player1_board.CARD_IN_DECK;
+  
+    if(p_deck_id == 0){
+      test_deck = shuffle(test_deck);
+      test_deck.forEach(function(v,i,a){ player1_board.CARD_IN_DECK.push(v); });
+      
+      return player1_board.CARD_IN_DECK;
+    }else{
+      
+      const apiUrl = 'https://oracleapex.com/ords/wksp_rmutttransfer/bst/DECK?DECK_ID=' + p_deck_id;
+      // console.log("apiUrl:", apiUrl);
+      try {
+        const response = await fetch(apiUrl, {
+          method: "GET",
+          headers: {"Content-Type": "application/json"}
+        });
+        const data = await response.json();
+        player1_board.CARD_IN_DECK = shuffle(data.items);
+        return shuffle(data.items);
+      } catch (error) {
+        alert("Error: โหลด Deck ไม่ได้จ้า");
+        throw error;
+      }
+    }
+    
 }
 
 function shuffle(sourceArray) {
@@ -163,7 +195,7 @@ function shuffle(sourceArray) {
 }
 
 async function start_game() {
-    player1_board.CARD_IN_DECK = await get_deck(1);
+    player1_board.CARD_IN_DECK = await get_deck(document.getElementById('deck_id').value);
     load_deck(player1_board.CARD_IN_DECK);
     set_default_core();
 }
@@ -172,12 +204,15 @@ function draw_deck(p_amt){
   p_amt = p_amt || 1;
   for(let i = 1; i<=p_amt;i++){
     if(player1_board.CARD_IN_DECK.length > 0){
+      console.log('draw',i);
       player1_board.CARD_IN_HAND.push(player1_board.CARD_IN_DECK.pop());
     }
+    if(player1_board.CARD_IN_DECK.length == 0){
+      document.getElementById('P1_DECK').style.display = "none";
+      break;
+    }
   }
-  if(player1_board.CARD_IN_DECK.length == 0){
-    document.getElementById('P1_DECK').style.display = "none";
-  }
+  
   load_card();
 }
 
@@ -198,9 +233,9 @@ function load_card(){
   const mirage_zone = document.querySelector('div[zone="'+'MIRAGE'+'"]');
     if(burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 1) {
         burst_zone.firstElementChild.remove();
-        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/SLEEVE.png">');
+        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" onclick="open_dialog(\'CARD\',\'BURST\',\''+ player1_board.CARD_IN_BURST[0]['cid_id'] +'\')" src="images/SLEEVE.png">');
     }else if(!burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 1){
-        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" src="images/SLEEVE.png">');
+        burst_zone.insertAdjacentHTML('beforeend','<img class="CARD_CSS" onclick="open_dialog(\'CARD\',\'BURST\',\''+ player1_board.CARD_IN_BURST[0]['cid_id'] +'\')" src="images/SLEEVE.png">');
     }else if(burst_zone.firstElementChild && player1_board.CARD_IN_BURST.length == 0){
         burst_zone.firstElementChild.remove();
     }
@@ -218,7 +253,7 @@ function load_card(){
   while (spirit_zone.firstElementChild) {spirit_zone.firstElementChild.remove();}
   while (nexus_zone.firstElementChild) {nexus_zone.firstElementChild.remove();}
   player1_board.CARD_IN_HAND.forEach(function(v,i,a){
-      hand.insertAdjacentHTML('beforeend','<img class="CARD_CSS" onclick="open_dialog(\'CARD\',\''+v['cid_id']+'\');" src="images/'+v['card_image']+'.webp">');
+      hand.insertAdjacentHTML('beforeend','<img class="CARD_CSS" onclick="open_dialog(\'CARD\',\'hand\',\''+v['cid_id']+'\');" src="images/'+v['card_image']+'.webp">');
   })
 
   player1_board.CARD_IN_BOARD.forEach(function(v,i,a){
@@ -241,6 +276,11 @@ function load_core(){
     const counter_zone = document.querySelector('div[zone="'+'COUNTER'+'"] .COUNTER_NUMBER');
     while (life_zone.firstElementChild) {life_zone.firstElementChild.remove();}
     while (reserve_zone.firstElementChild) {reserve_zone.firstElementChild.remove();}
+
+    total_core_in_life    = player1_core.core_life    + player1_core.soul_core_life;
+    total_core_in_reserve = player1_core.core_reserve + player1_core.soul_core_reserve;
+    total_core_in_trash   = player1_core.core_trash   + player1_core.soul_core_trash;
+
     if(player1_core.core_life <= 6){
         for(let i = 1; i<=player1_core.core_life;i++){
             life_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
@@ -250,7 +290,7 @@ function load_core(){
             life_zone.classList.remove("slots");
             life_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
             life_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+player1_core.core_life+'</div>');
-        }
+      }
     if(player1_core.core_reserve <= 6){ 
         for(let i = 1; i<=player1_core.core_reserve;i++){
             reserve_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
@@ -263,8 +303,55 @@ function load_core(){
         }
     counter_zone.innerHTML = player1_core.counter;
 }
+function open_dialog1(p_type,zone){
+  const dialog        = document.getElementById("Dialog_list");
+  const dialog_detail = document.getElementById("Dialog_list_detail")
+  const list_group_row = document.createElement('div');
+  
+  list_group_row.classList.add('list_group_row');
+  while (dialog_detail.firstElementChild) {dialog_detail.firstElementChild.remove();}
 
-function open_dialog(p_type,p_cid_id){
+  if(p_type == 'CORE'){
+    if(zone.includes("LIFE")){
+        const life_list = document.createElement('div');
+        life_list.classList.add("list_group");
+        life_list.innerHTML += '<div class="title">Life</div>';
+        life_list.innerHTML +='<img class="Blue_core" src="images/Blue_core.webp"><div class="CORE_NUMBER"> ×'+player1_core.core_life+'</div>';
+
+        list_group_row.appendChild(life_list);
+        list_group_row.innerHTML +='<div class="button-container" style="justify-content: center; margin-top: 20px;">'+'\n'+
+        '<button class="btn_core" onclick="paid_core("LIFE")",-1>-</button>'+'\n'+
+        '<button class="btn_core" onclick="paid_core("LIFE",1)">+</button>'+'\n'+
+        '</div>';
+    }
+
+  }
+
+  dialog_detail.appendChild(list_group_row);
+  dialog.showModal();
+}
+
+function paid_core(p_type,p_amt){
+  if(p_type == 'LIFE'){
+    player1_core_paid.core_life 
+  }
+}
+
+function close_dialog(){
+  const dialog = document.getElementById("Dialog");
+  dialog.close();
+  document.getElementById("Dialog_title").innerText = "";
+  document.getElementById("Dialog_detail").innerText = "";
+}
+
+function close_dialog1(){
+  const dialog = document.getElementById("Dialog_list");
+  dialog.close();
+  document.getElementById("Dialog_list_title").innerText = "";
+  document.getElementById("Dialog_list_detail").innerText = "";
+}
+
+function open_dialog(p_type,p_location,p_cid_id){
   const dialog = document.getElementById("Dialog");
   document.getElementById("Dialog_title").innerText = "";
   document.getElementById("Dialog_detail").innerText = "";
@@ -290,12 +377,11 @@ function open_dialog(p_type,p_cid_id){
       let reduct_html = '';
       let v_btn = '',v_eff = '';
       let v_skills = JSON.parse(p_card['card_skills']) , v_levels = JSON.parse(p_card['card_levels']);
-      console.log(v_skills);
       p_card['card_cost_reduct'].split(',').forEach(function(v,i,a){
-          if(v == 'red') reduct_html += '<img src="images/Reduct_Red.png">';
-          else if(v == 'blue') reduct_html += '<img src="images/Reduct_Blue.png">';
-          else if(v == 'green') reduct_html += '<img src="images/Reduct_Green.png">';
-          else if(v == 'god') reduct_html += '<img src="images/Reduct_God.png">';
+          if(v == 'red') reduct_html            += '<img src="images/Reduct_Red.png">';
+          else if(v == 'blue') reduct_html      += '<img src="images/Reduct_Blue.png">';
+          else if(v == 'green') reduct_html     += '<img src="images/Reduct_Green.png">';
+          else if(v == 'god') reduct_html       += '<img src="images/Reduct_God.png">';
           else if(v == 'colorless') reduct_html += '<img src="images/Reduct_Colorless.png">';
       });
       if (p_card['card_type'] == 'magic'){
@@ -312,12 +398,24 @@ function open_dialog(p_type,p_cid_id){
       if (p_card['is_mirage'] == 'Y'){
         v_btn += '<button class="action_btn" onclick="set_mirage(\''+p_card['cid_id']+'\');">Set Mirage</button>'+'\n';
       }
-      if(v_skills){
+
+      if(p_location == 'BURST'){
+        v_btn += '<button class="action_btn" onclick="use_burst(\''+p_card['cid_id']+'\');">activate_burst</button>'+'\n';
+      }
+      if(v_skills.length > 0){
         v_skills.forEach(function (v,i,a){
-          v_eff += '<div class="CARD_EFFECT_LIST" onclick="use_skill(\''+v['CARD_SKILL'].replaceAll("'",'`')+'\' , \''+'1'+'\')">'+v['CARD_SKILL_DESC']+'</div>'+'\n' ;
+          v_eff += '<div class="CARD_EFFECT_LIST" '+
+                      'onclick="use_skill(\''+ convert_skill(v['CARD_SKILL'],p_card) + '\')">'+v['CARD_SKILL_DESC']
+                                                                                                                  .replaceAll('img_red',    '<img class="core_img" src="images/Reduct_Red.png">')
+                                                                                                                  .replaceAll('img_blue',   '<img class="core_img" src="images/Reduct_Blue.png">')
+                                                                                                                  .replaceAll('img_green',  '<img class="core_img" src="images/Reduct_Green.png">')
+                                                                                                                  .replaceAll('img_purple', '<img class="core_img" src="images/Reduct_Purple.png">')
+                                                                                                                  .replaceAll('img_yellow', '<img class="core_img" src="images/Reduct_Yellow.png">')
+                                                                                                                  .replaceAll('img_god',    '<img class="core_img" src="images/Reduct_God.png">')
+                    
+                      +'</div>'+'\n' ;
         });
       }
-      
       let detail = 
         '<div class="CARD_INFO">'+'\n' +
         '<img class="CARD_CSS_INFO" src="'+get_img(p_card['card_image'])+'">'+'\n' +
@@ -342,6 +440,22 @@ function open_dialog(p_type,p_cid_id){
       dialog.showModal();
       return;
   }
+}
+
+function convert_skill(p_skill,p_card){
+  if(p_skill){
+    return p_skill
+          .replaceAll("'",'`')
+          .replaceAll('this_cid_id',p_card['cid_id']);
+  }else{
+    return p_skill;
+  }
+  
+          
+}
+
+function use_burst(p_cid_id){
+  console.log('Burst');
 }
 
 async function use_card(p_cid_id){
@@ -399,13 +513,6 @@ function use_skill(p_raw_code){
     let fn = new Function(p_raw_code);
     fn();
     close_dialog();
-}
-
-function close_dialog(){
-  const dialog = document.getElementById("Dialog");
-  dialog.close();
-  document.getElementById("Dialog_title").innerText = "";
-  document.getElementById("Dialog_detail").innerText = "";
 }
 
 function flip_coin(p_side) {

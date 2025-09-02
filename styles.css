@@ -6,6 +6,15 @@
     width: 20px;
 }
 
+.EFF_H .core_img{
+
+}
+
+.list_group .Blue_core {
+    height: 10vh;
+}
+
+
 .CARD_CSS{
   width: 79px;               
   flex-shrink: 0;                    
@@ -182,13 +191,76 @@ div[zone="HAND"]{
   #playmat .mat { box-shadow: none; }
 } */
 
+#Dialog_list{
+  width: fit-content;
+}
+#Dialog_list_detail{
+  margin-bottom: unset;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  max-width: 800px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.list_group{
+  display: flex;
+  align-items: center;
+}
+.list_group_row {
+    background: #0b0f1a;
+    border-radius: 20px;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+}
+.list_group_row .title{
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #c7d2fe;
+    text-shadow: 2px 2px 0px black;
+}
+button.btn_core {
+    font-size: 5vh;
+    width: 3vw;
+}
+.CORE_NUMBER {
+    font-family: "New Rocker", system-ui;
+    color: #c7d2fe;
+    font-size: 35px;
+    margin-left: 10px;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: darkgrey;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 17px;
+  border-color: black;
+  border-style: solid;
+  width: 3vw;
+  height: 3vw;
+}
+
+.closeButton:hover{
+  background-color: white;
+}
+
 .dialog {
     border: none;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-#Dialog_title {
+.Dialog_title {
     margin-top: 0;
     text-align: center;
 }
@@ -207,6 +279,7 @@ div[zone="HAND"]{
 .detail_info{
     font-weight: normal;
 }
+
 .CARD_EFFECT_LIST{
     margin-left: 16px;
     margin-top: 10px;
@@ -222,6 +295,7 @@ div[zone="HAND"]{
 .CARD_EFFECT_LIST:hover{
     background-color: red;
     transition: background-color 0.5s ease;
+    color: white;
 }
 
 .CARD_EFFECT_LIST .row {
@@ -238,6 +312,9 @@ div[zone="HAND"]{
 }
 
 .CARD_EFFECT_LIST .EFF_H {
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
 }
 
 .CARD_EFFECT_LIST .EFF_B {
@@ -359,16 +436,6 @@ div[zone="RESERVE"] , div[zone="TRASH"]{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#closeButton {
-  position: absolute;
-  top: 10px; /* Adjust as needed for desired spacing from top */
-  right: 10px; /* Adjust as needed for desired spacing from right */
-  background-color: transparent;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
 }
 
 .board {
