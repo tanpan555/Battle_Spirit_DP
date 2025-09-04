@@ -2,9 +2,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Battle Spirits</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="Scripts\script.js"></script>
         <link rel="stylesheet" href="styles.css">
+        <script src="Scripts/script.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -12,65 +12,173 @@
             rel="stylesheet">
     </head>
     <body>
-        <button class="bs_button" onclick="start_game();"> Load Deck</button>
-        <button class="bs_button" onclick="open_dialog('COIN');"> ทอยเหรียญมาๆ</button>
-        <input id="deck_id" type="text" value="0"></input>
+        <button class="bs_button" onclick="start_game();">Load Deck</button>
+        <button class="bs_button"
+            onclick="open_dialog('COIN');">ทอยเหรียญมาๆ</button>
+
+        <label for="deck_id">Deck ID:</label>
+        <input id="deck_id" type="text" value="0">
+
+        <div id="tooltip" style="display: none;" class="tooltip">Tooltip
+            Text</div>
 
         <dialog id="Dialog">
-            <h2 id="Dialog_title" class="Dialog_title"></h2><button class="closeButton" onclick="close_dialog();">X</button>
+            <h2 id="Dialog_title" class="Dialog_title"></h2>
+            <button class="closeButton" onclick="close_dialog();">X</button>
             <p id="Dialog_detail" style="margin-bottom: unset;"></p>
         </dialog>
-        <dialog id="Dialog_list">
-            <h2 id="Dialog_list_title" class="Dialog_title"></h2><button class="closeButton" onclick="close_dialog1();">X</button>
-            <p id="Dialog_list_detail" style="margin-bottom: unset;padding: 10px;"></p>
-        </dialog>
 
-        <div id="playmat" class="playmat_p1">
-            <div class="wrapper">
+        <dialog id="Dialog_list">
+            <h2 id="Dialog_list_title" class="Dialog_title"></h2>
+            <button class="closeButton" onclick="close_dialog1();">X</button>
+            <p id="Dialog_list_detail"
+                style="margin-bottom: unset; padding: 10px;"></p>
+        </dialog>
+        <div class="playmats-container">
+            <div id="playmat2" class="playmat_p2 playmat">
                 <div class="mat">
-                    <!-- <div class="safe" aria-hidden="true"></div> -->
                     <div class="grid">
                         <div class="left-top">
                             <section class="zone">
-                                <h2>Burst</h2><div class="slots row-2 ">
-                                    <div zone="MIRAGE" onclick="" class="slot"></div>
-                                    <div zone="BURST"  onclick="" class="slot"></div>
+                                <h2>Burst</h2>
+                                <div class="slots row-2">
+                                    <div zone="MIRAGE" class="slot"></div>
+                                    <div zone="BURST" class="slot"></div>
                                 </div>
                             </section>
-                            <section class="zone" onclick="add_core('LIFE',1)"
-                                oncontextmenu="remove_core('LIFE',1); return false;">
-                                <h2>Life</h2><div zone="LIFE" class="slots row-3 stack-2"></div>
-                            </section>
+
                             <section class="zone"
-                                onclick="add_core('RESERVE',1)"
-                                oncontextmenu="remove_core('RESERVE',1); return false;">
-                                <h2>Reserve</h2><div zone="RESERVE"class="slots row-6 stack-2"></div>
+                                onclick="add_core('LIFE',1,2)"
+                                oncontextmenu="remove_core('LIFE',1,2); return false;">
+                                <h2>Life</h2>
+                                <div zone="LIFE"
+                                    class="slots row-3 stack-2"></div>
+                            </section>
+
+                            <section class="zone"
+                                onclick="add_core('RESERVE',1,2)"
+                                oncontextmenu="remove_core('RESERVE',1,2); return false;">
+                                <h2>Reserve</h2>
+                                <div zone="RESERVE"
+                                    class="slots row-6 stack-2"></div>
                             </section>
                         </div>
-                        <section class="field">
-                            <div class="zone" style><h2>Spirits      </h2><div zone="SPIRIT" class="board"></div></div>
-                            <div class="zone" style><h2>Nexus / Magic</h2><div zone="NEXUS"  class="board"></div></div>
-                            <div class="zone"style=" height: fit-content;"><h2>Hand</h2><div zone="HAND" id="P1_HAND"></div></div>
-                        </section>
-                        <div class="right-top">
-                            <section class="zone" style="height: auto;">
-                                <h2>Counter</h2><div onclick="add_counter(1)" zone="COUNTER"class="slots">
-                                    <div class="slot COUNTER_NUMBER ">0</div>
-                                </div>
+
+                        <div class="center">
+                            <section class="zone">
+                                <h2>Spirits</h2>
+                                <div zone="SPIRIT" class="board"></div>
                             </section>
                             <section class="zone">
+                                <h2>Nexus / Magic</h2>
+                                <div zone="NEXUS" class="board"></div>
+                            </section>
+                            <section class="zone" style="height: fit-content;">
+                                <h2>Hand</h2>
+                                <div zone="HAND" id="P2_HAND"></div>
+                            </section>
+                        </div>
+
+                        <div class="right-top">
+                            <section class="zone" style="height: auto;">
+                                <h2>Counter</h2>
+                                <div onclick="add_counter(1)" zone="COUNTER"
+                                    class="slots">
+                                    <div class="slot COUNTER_NUMBER">0</div>
+                                </div>
+                            </section>
+
+                            <section class="zone">
                                 <h2>Deck</h2>
-                                    <div zone="DECK" class="slots" onclick="draw_deck(1)">
-                                        <div class="slot">
-                                            <img id="P1_DECK" class="CARD_CSS">
+                                <div zone="DECK" class="slots"
+                                    onclick="draw_deck(1,2)">
+                                    <div class="slot">
+                                        <img id="P2_DECK" class="CARD_CSS">
                                     </div>
                                 </div>
                             </section>
+
                             <section class="zone">
                                 <h2>Graveyard</h2>
-                                    <div zone="GY" class="slots">
-                                        <div class="slot">
-                                            <img id="P1_GY" class="CARD_CSS">
+                                <div zone="GY" class="slots">
+                                    <div class="slot">
+                                        <img id="P2_GY" class="CARD_CSS">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="playmat1" class="playmat_p1 playmat">
+                <div class="mat">
+                    <div class="grid">
+                        <div class="left-top">
+                            <section class="zone">
+                                <h2>Burst</h2>
+                                <div class="slots row-2">
+                                    <div zone="MIRAGE" class="slot"></div>
+                                    <div zone="BURST" class="slot"></div>
+                                </div>
+                            </section>
+
+                            <section class="zone"
+                                onclick="add_core('LIFE',1,1)"
+                                oncontextmenu="remove_core('LIFE',1,1); return false;">
+                                <h2>Life</h2>
+                                <div zone="LIFE"
+                                    class="slots row-3 stack-2"></div>
+                            </section>
+
+                            <section class="zone"
+                                onclick="add_core('RESERVE',1,1)"
+                                oncontextmenu="remove_core('RESERVE',1,1); return false;">
+                                <h2>Reserve</h2>
+                                <div zone="RESERVE"
+                                    class="slots row-6 stack-2"></div>
+                            </section>
+                        </div>
+
+                        <div class="center">
+                            <section class="zone">
+                                <h2>Spirits</h2>
+                                <div zone="SPIRIT" class="board"></div>
+                            </section>
+                            <section class="zone">
+                                <h2>Nexus / Magic</h2>
+                                <div zone="NEXUS" class="board"></div>
+                            </section>
+                            <section class="zone" style="height: fit-content;">
+                                <h2>Hand</h2>
+                                <div zone="HAND" id="P1_HAND"></div>
+                            </section>
+                        </div>
+
+                        <div class="right-top">
+                            <section class="zone" style="height: auto;">
+                                <h2>Counter</h2>
+                                <div onclick="add_counter(1)" zone="COUNTER"
+                                    class="slots">
+                                    <div class="slot COUNTER_NUMBER">0</div>
+                                </div>
+                            </section>
+
+                            <section class="zone">
+                                <h2>Deck</h2>
+                                <div zone="DECK" class="slots"
+                                    onclick="draw_deck(1,1)">
+                                    <div class="slot">
+                                        <img id="P1_DECK" class="CARD_CSS">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="zone">
+                                <h2>Graveyard</h2>
+                                <div zone="GY" class="slots">
+                                    <div class="slot">
+                                        <img id="P1_GY" class="CARD_CSS">
                                     </div>
                                 </div>
                             </section>
@@ -79,6 +187,5 @@
                 </div>
             </div>
         </div>
-
     </body>
 </html>
