@@ -45,32 +45,6 @@ function add_core(p_zone,p_amt,player_side){
         case 'RESERVE': player_core.core_reserve += p_amt; break;
         case 'COUNTER': player_core.counter      += p_amt; break;
     }
-
-    // if(p_zone == 'RESERVE'){
-    //   if(player_core.core_reserve <= 6){
-    //     for(let i = 1; i<=p_amt;i++){ 
-    //       selected_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
-    //     }
-    //   }else{
-    //     selected_zone.classList.add("many_core");
-    //     selected_zone.classList.remove("slots");
-    //     while (selected_zone.firstElementChild) {selected_zone.firstElementChild.remove();}
-    //     selected_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
-    //     selected_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+player_core.core_reserve+'</div>');
-    //   }
-    // }else if(p_zone == 'LIFE'){
-    //   if(player_core.core_life <= 6){
-    //     for(let i = 1; i<=p_amt;i++){ 
-    //       selected_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
-    //     }
-    //   }else{
-    //     selected_zone.classList.add("many_core");
-    //     selected_zone.classList.remove("slots");
-    //     while (selected_zone.firstElementChild) {selected_zone.firstElementChild.remove();}
-    //     selected_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
-    //     selected_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+player_core.core_life+'</div>');
-    //   }
-    // }
     load_core(player_side);
 }
 
@@ -120,30 +94,26 @@ function add_counter(p_value,player_side){
     if(zone) zone.innerHTML = player_core.counter;
 }
 
-async function test_get_deck(p_deck_id) {
-  const apiUrl = 'https://oracleapex.com/ords/wksp_rmutttransfer/bst/DECK?DECK_ID=' + p_deck_id;
-  try {
-    const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {"Content-Type": "application/json" , "Access-Control-Allow-Origin" : "*"}
-    });
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error:", error);
-    throw error;
-  }  
+function shuffle(sourceArray) {
+    for (let i = 0; i < sourceArray.length - 1; i++) {
+        let j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+        let temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
+    return sourceArray;
+}
+
+function cloneDeck(deck) {
+  return deck.map(card => JSON.parse(JSON.stringify(card)));
 }
 
 async function get_deck(p_deck_id) {
-  
-    if(p_deck_id == 0){
-      test_deck = shuffle(test_deck);
-      test_deck.forEach(function(v,i,a){ player1_board.CARD_IN_DECK.push(v); });
-      test_deck = shuffle(test_deck);
-      test_deck.forEach(function(v,i,a){ player2_board.CARD_IN_DECK.push(v); });
-      return player1_board.CARD_IN_DECK;
-    }else{
+    if (p_deck_id == 0) {
+    let deck = shuffle(cloneDeck(test_deck));
+    return deck;
+  }else{
       
       const apiUrl = 'https://oracleapex.com/ords/wksp_rmutttransfer/bst/DECK?DECK_ID=' + p_deck_id;
       // console.log("apiUrl:", apiUrl);
@@ -163,16 +133,6 @@ async function get_deck(p_deck_id) {
     
 }
 
-function shuffle(sourceArray) {
-    for (let i = 0; i < sourceArray.length - 1; i++) {
-        let j = i + Math.floor(Math.random() * (sourceArray.length - i));
-
-        let temp = sourceArray[j];
-        sourceArray[j] = sourceArray[i];
-        sourceArray[i] = temp;
-    }
-    return sourceArray;
-}
 
 async function start_game() {
     player1_board.CARD_IN_DECK = await get_deck(document.getElementById('deck_id').value);
@@ -184,35 +144,43 @@ async function start_game() {
     load_core(2);
 }
 
-function draw_deck(p_amt,player_side){
+function draw_deck(p_amt, player_side, delay = 200) {
   p_amt = p_amt || 1;
-  console.log(p_amt,player_side)
-  for(let i = 1; i<=p_amt;i++){
-    if (player_side == 1){
-      if(player1_board.CARD_IN_DECK.length > 0){
-        player1_board.CARD_IN_HAND.push(player1_board.CARD_IN_DECK.pop());
-      }
-      if(player1_board.CARD_IN_DECK.length == 0){
-        document.getElementById('P1_DECK').style.display = "none";
-        break;
-      }
-    }else if(player_side == 2){
-      console.log('player_side : ',player_side);
-      console.log('CARD_IN_DECK : ',player2_board.CARD_IN_DECK);
-      if(player2_board.CARD_IN_DECK.length > 0){
-        player2_board.CARD_IN_HAND.push(player2_board.CARD_IN_DECK.pop());
-        console.log('CARD_IN_HAND : ',player2_board.CARD_IN_HAND);
-      }
-      if(player2_board.CARD_IN_DECK.length == 0){
-        document.getElementById('P2_DECK').style.display = "none";
-        break;
-      }
-    }
-    
+  let board, deckElem;
+
+  if (player_side === 1) {
+    board = player1_board;
+    deckElem = document.getElementById('P1_DECK');
+  } else if (player_side === 2) {
+    board = player2_board;
+    deckElem = document.getElementById('P2_DECK');
+  } else {
+    console.warn("Invalid player_side:", player_side);
+    return;
   }
-  
-  load_card(player_side);
+
+  // Async loop with delay for smooth drawing
+  let i = 0;
+  function drawNext() {
+    if (i >= p_amt) return;
+
+    if (board.CARD_IN_DECK.length > 0) {
+      let get_card = board.CARD_IN_DECK.pop();
+      board.CARD_IN_HAND.push(get_card);
+      load_card(player_side); // update UI after each card
+    }
+
+    if (board.CARD_IN_DECK.length === 0) {
+      deckElem.style.display = "none";
+      return;
+    }
+
+    i++;
+    setTimeout(drawNext, delay); // wait before drawing next card
+  }
+  drawNext();
 }
+
 
 function load_deck(){
     if(player1_board.CARD_IN_DECK.length > 0){
@@ -302,9 +270,9 @@ function load_core(player_side){
       }else{
             life_zone.classList.add("many_core");
             life_zone.classList.remove("slots");
-            if(player_core.core_life > 0){
-              reserve_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Soul_Core.webp"></div>');
-              reserve_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+ player_core.soul_core_life+'</div>');            
+            if(player_core.soul_core_life > 0){
+              life_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Soul_Core.webp"></div>');
+              life_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+ player_core.soul_core_life+'</div>');            
             }
             life_zone.insertAdjacentHTML('beforeend','<div class="slot"><img class="Blue_core" src="images/Blue_core.webp"></div>');
             life_zone.insertAdjacentHTML('beforeend','<div class="CORE_NUMBER"> ×'+player_core.core_life+'</div>');
@@ -333,64 +301,174 @@ function load_core(player_side){
         }
     counter_zone.innerHTML = player_core.counter;
 }
-function open_dialog1(p_type,zone,core_need,player_side){
-  const dialog        = document.getElementById("Dialog_list");
-  const dialog_detail = document.getElementById("Dialog_list_detail")
-  const list_group_row = document.createElement('div');
-  player_board = (player_side == 1? player1_board : player2_board);
-  if (player_side == 1){
-    player1_core_paid = createCoreState();
-  }else{
-    player2_core_paid = createCoreState();
-  }
-  
-  list_group_row.classList.add('list_group_row');
-  while (dialog_detail.firstElementChild) {dialog_detail.firstElementChild.remove();}
 
-  if(p_type == 'CORE'){
-    if(zone.includes("LIFE")){
+function open_dialog1(p_type, zone, p_cid_id, player_side) {
+  return new Promise((resolve) => {
+    const dialog        = document.getElementById("Dialog_list");
+    const dialog_detail = document.getElementById("Dialog_list_detail");
+    const list_group_row = document.createElement('div');
+    let player_board = (player_side == 1 ? player1_board : player2_board);
+    if (player_side == 1) {
+      player1_core_paid = createCoreState();
+    } else {
+      player2_core_paid = createCoreState();
+    }
+    let player_core_paid = (player_side == 1 ? player1_core_paid : player2_core_paid);
+
+    list_group_row.classList.add('list_group_row');
+    while (dialog_detail.firstElementChild) {
+      dialog_detail.firstElementChild.remove();
+    }
+
+    if (p_type == 'CORE') {
+      if (zone.includes("LIFE")) {
         const life_list = document.createElement('div');
         life_list.classList.add("list_group");
         life_list.innerHTML += '<div class="title">Life</div>';
-        life_list.innerHTML +='<img class="Blue_core" src="images/Blue_core.webp"><div id="P1_CORE_PAID_LIFE" class="CORE_NUMBER"> ×'+player1_core_paid.core_life+'</div>';
-        life_list.innerHTML +='<div class="button-container" style="justify-content: center; margin-top: 20px;">'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'LIFE\',-1)">-</button>'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'LIFE\',1)">+</button>'+'\n'+
-        '</div>';
+        life_list.innerHTML +=
+          '<div class="group_container"><img class="Blue_core" src="images/Blue_core.webp"><div id="P1_CORE_PAID_LIFE" class="CORE_NUMBER"> ×' +
+          player1_core_paid.core_life +
+          '</div>' +
+          '<div class="button-container" style="justify-content: center; margin-top: 20px;">' +
+          '<button class="btn_core" onclick="paid_core(\'LIFE\',-1)">-</button>' +
+          '<button class="btn_core" onclick="paid_core(\'LIFE\',1)">+</button>' +
+          '</div>';
         list_group_row.appendChild(life_list);
-    }
-    if(zone.includes("RESERVE")){
-      const reserve_list = document.createElement('div');
-      reserve_list.classList.add("list_group");
-      reserve_list.innerHTML += '<div class="title">Reserve</div>';
-      reserve_list.innerHTML +='<img class="Blue_core" src="images/Blue_core.webp"><div id="P1_CORE_PAID_RESERVE" class="CORE_NUMBER"> ×'+ player1_core_paid.core_reserve+'</div>';
-      reserve_list.innerHTML +='<div class="button-container" style="justify-content: center; margin-top: 20px;">'+'\n'+
-      '<button class="btn_core" onclick="paid_core(\'RESERVE\',-1)">-</button>'+'\n'+
-      '<button class="btn_core" onclick="paid_core(\'RESERVE\',1)">+</button>'+'\n'+
-      '</div>';
-      list_group_row.appendChild(reserve_list);
-    }
-    if(zone.includes("FIELD")){
-      const field_list = document.createElement('div');
-      field_list.classList.add("list_group");
-      field_list.innerHTML += '<div class="title">Field</div>';
-      for(let i = 0; i<= player_board.CARD_IN_BOARD.length; i++ ){
-        field_list.innerHTML +='<img class="CARD_CSS" src="'+ get_img(player_board.CARD_IN_BOARD[i]['card_image']) +'"><div id="CORE_OF_'+player_board.CARD_IN_BOARD[i]['cid_id']+'" class="CORE_NUMBER"> ×'+ player_board.CARD_IN_BOARD[i]['card_core'] +'</div>';
-        field_list.innerHTML +='<div class="button-container" style="justify-content: center; margin-top: 20px;">'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'FIELD\',-1)">-</button>'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'FIELD\',1)">+</button>'+'\n'+
-        '</div>';
       }
-      list_group_row.appendChild(field_list);
+      if (zone.includes("RESERVE")) {
+        const reserve_list = document.createElement('div');
+        reserve_list.classList.add("list_group");
+        reserve_list.innerHTML += '<div class="title">Reserve</div>';
+        reserve_list.innerHTML +=
+          '<div class="group_container"><img class="Blue_core" src="images/Blue_core.webp"><div id="P1_CORE_PAID_RESERVE" class="CORE_NUMBER"> ×' +
+          player1_core_paid.core_reserve +
+          '</div>' +
+          '<div class="button-container" style="justify-content: center; margin-top: 20px;">' +
+          '<button class="btn_core" onclick="paid_core(\'RESERVE\',-1)">-</button>' +
+          '<button class="btn_core" onclick="paid_core(\'RESERVE\',1)">+</button>' +
+          '</div>';
+        list_group_row.appendChild(reserve_list);
+      }
+      if (zone.includes("FIELD") && player_board.CARD_IN_BOARD.length > 0) {
+        const field_list = document.createElement('div');
+        field_list.classList.add("list_group");
+        field_list.innerHTML += '<div class="title">Field</div>';
+        for (let i = 0; i < player_board.CARD_IN_BOARD.length; i++) {
+          field_list.innerHTML +=
+            '<div class="group_container"><img class="CARD_CSS" src="' +
+            get_img(player_board.CARD_IN_BOARD[i]["card_image"]) +
+            '"><div id="CORE_OF_' +
+            player_board.CARD_IN_BOARD[i]["cid_id"] +
+            '" class="CORE_NUMBER"> ×' +
+            player_board.CARD_IN_BOARD[i]["card_core"] +
+            "</div>" +
+            '<div class="button-container" style="justify-content: center; margin-top: 20px;">' +
+            '<button class="btn_core" onclick="paid_core(\'FIELD\',-1)">-</button>' +
+            '<button class="btn_core" onclick="paid_core(\'FIELD\',1)">+</button>' +
+            "</div></div>";
+        }
+        list_group_row.appendChild(field_list);
+      }
+    }
+
+    dialog_detail.appendChild(list_group_row);
+
+    // Add confirm button dynamically and resolve promise when clicked
+    const confirmBtn = document.createElement("button");
+    confirmBtn.classList.add("btn_dialog_cf");
+    confirmBtn.innerText = "Confirm";
+    confirmBtn.onclick = () => {
+      let cost     = calculateRemainingCost(p_cid_id,player_side);
+      let core_use = totalCoresPaid(player_board);
+      console.log(cost,core_use);
+      dialog.close();
+      resolve(true);
+    };
+
+    const confirmContainer = document.createElement("div");
+    confirmContainer.classList.add("button-container");
+    confirmContainer.style.cssText = "justify-content: center; margin-top: 20px;";
+    confirmContainer.appendChild(confirmBtn);
+
+    dialog_detail.appendChild(confirmContainer);
+    dialog.showModal();
+  });
+}
+//////////////////////////////////////////////////////////////////////////////////
+// 1️⃣ Get cost_reduct list for a specific card
+function getCostReduct(cid,player_side) {
+  player_board = (player_side == 1? player1_board : player2_board);
+  let card = player_board.CARD_IN_HAND.find(c => c.cid_id === cid);
+  if (!card) return [];
+  return card.card_cost_reduct.split(",");
+}
+
+// 2️⃣ Get all symbols on the board
+function getAllBoardSymbols(player_side) {
+  player_board = (player_side == 1? player1_board : player2_board);
+  return player_board.flatMap(card => card.card_symbol.split(","));
+}
+
+// 3️⃣ Calculate max reduction with prioritized exact matches
+function calculateRemainingCost(cid,player_side) {
+  player_board = (player_side == 1? player1_board : player2_board);
+  let card = player_board.CARD_IN_HAND.find(c => c.cid_id === cid);
+  if (!card) return null;
+
+  let costReduct = getCostReduct(cid); // symbols required
+  let boardSymbols = getAllBoardSymbols();
+
+  let tempSymbols = [...boardSymbols];
+  let reductionCount = 0;
+
+  for (let costSym of costReduct) {
+    // 1️⃣ Try to find exact match first
+    let exactIndex = tempSymbols.findIndex(sym => !sym.includes("/") && sym === costSym);
+
+    if (exactIndex !== -1) {
+      reductionCount++;
+      tempSymbols.splice(exactIndex, 1);
+      continue;
+    }
+
+    // 2️⃣ Try to find a multi-color symbol that can match
+    let multiIndex = tempSymbols.findIndex(sym => sym.includes("/") && sym.split("/").includes(costSym));
+    if (multiIndex !== -1) {
+      reductionCount++;
+      tempSymbols.splice(multiIndex, 1);
     }
   }
-  dialog_detail.appendChild(list_group_row);
-  dialog_detail.innerHTML +='<div class="button-container" style="justify-content: center; margin-top: 20px;">'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'FIELD\',-1)">Cancel</button>'+'\n'+
-        '<button class="btn_core" onclick="paid_core(\'FIELD\',1)">Confirm</button>'+'\n'+
-        '</div>';
-  dialog.showModal();
+
+  let remainingCost = Math.max(0, card.card_cost - reductionCount);
+  // return {
+  //   maxReduction: reductionCount,
+  //   remainingCost: remainingCost
+  // };
+  return remainingCost;
 }
+
+function sumTopLevelCores(obj) {
+  let sum = 0;
+  for (let key in obj) {
+    if (key !== 'board' && typeof obj[key] === 'number') {
+      sum += obj[key];
+    }
+  }
+  return sum;
+}
+
+// Sum core_use in board array
+function sumBoardCoreUse(board) {
+  
+  return board ? board.reduce((acc, item) => acc + item.core_use, 0) : 0;
+}
+
+// Full total cores paid
+function totalCoresPaid(player) {
+  return sumTopLevelCores(player) + sumBoardCoreUse(player.board);
+}
+
+//////////////////////////////////////////////////////////////////////////////////
 
 function paid_core(p_type,p_amt){
   if(p_type == 'LIFE'){
@@ -456,7 +534,7 @@ function open_dialog(p_type,p_location,p_cid_id,player_side){
       });
       if(p_location == 'HAND'){
         if (p_card['card_type'] == 'magic'){
-          v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\', \''+player_side+'\');">Use Magic</button>'+'\n';
+          // v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\', \''+player_side+'\');">Use Magic</button>'+'\n';
         }else if (p_card['card_type'] == 'spirit'){
           v_btn += '<button class="action_btn" onclick="use_card(\''+p_card['cid_id']+'\', \''+player_side+'\');">Summon</button>'+'\n';
         }else if (p_card['card_type'] == 'nexus'){
@@ -475,7 +553,7 @@ function open_dialog(p_type,p_location,p_cid_id,player_side){
       if(v_skills.length > 0){
         v_skills.forEach(function (v,i,a){
           v_eff += '<div class="CARD_EFFECT_LIST '+ (p_location == 'HAND' ? 'IN_HAND' : '' ) + '" '+
-                      'onclick="use_skill(\''+ convert_skill(v['CARD_SKILL'],p_card) + '\')">'+v['CARD_SKILL_DESC']
+                      'onclick="use_skill(\''+ convert_skill(v['CARD_SKILL'],p_card) + '\' , \''+p_card['cid_id']+'\')">'+v['CARD_SKILL_DESC']
                                                                                                                   .replaceAll('img_red',    '<img class="core_img" src="images/Reduct_Red.png">')
                                                                                                                   .replaceAll('img_blue',   '<img class="core_img" src="images/Reduct_Blue.png">')
                                                                                                                   .replaceAll('img_green',  '<img class="core_img" src="images/Reduct_Green.png">')
@@ -525,10 +603,11 @@ function convert_skill(p_skill,p_card){
 }
 
 function use_burst(p_cid_id){
-  console.log('Burst');
 }
 
 async function use_card(p_cid_id,player_side){
+    const confirmed = await open_dialog1("CORE", ["RESERVE", "FIELD"], p_cid_id, player_side);
+    if (!confirmed) return;
     let success;
     if (player_side == 1) {
        success = await get_card_to(
@@ -543,7 +622,6 @@ async function use_card(p_cid_id,player_side){
           p_cid_id
       );
     }
-    
     if (success) {
         load_card(player_side);
         close_dialog();
@@ -616,8 +694,6 @@ function set_GY(p_get_from,p_cid_id,player_side) {
 }
 
 function use_skill(p_raw_code){
-    // p_card = test_deck.find(card => card.cid_id == p_card_id);
-    // alert("ใช้สกิลของ : " + p_card['card_name'] + ' สกิลที่ : ' + p_skill_no);
     let fn = new Function(p_raw_code);
     fn();
     close_dialog();
